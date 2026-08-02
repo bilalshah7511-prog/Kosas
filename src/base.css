@@ -461,28 +461,29 @@ ul, ol {
   max-height: min(620px, 70vh);
   overflow-y: auto;
   overflow-x: hidden;
-  padding-right: 10px;
-  margin-right: 4px;
-  scrollbar-gutter: stable;
-  scrollbar-width: thin;
-  scrollbar-color: #d9d0e0 transparent;
+  padding-right: 4px;
+  margin-right: 0;
+  scrollbar-gutter: auto;
+  scrollbar-width: none; /* Firefox: hide duplicate bar */
+  -ms-overflow-style: none; /* IE/Edge */
 }
 
 .product-thumbs::-webkit-scrollbar {
-  width: 6px;
+  width: 0;
+  height: 0;
+  display: none;
 }
 
 .product-thumbs::-webkit-scrollbar-track {
-  background: transparent;
-  margin: 4px 0;
+  display: none;
 }
 
 .product-thumbs::-webkit-scrollbar-thumb {
-  background: #d9d0e0;
+  display: none;
 }
 
 .product-thumbs::-webkit-scrollbar-thumb:hover {
-  background: #c4b7cf;
+  display: none;
 }
 
 .product-thumb {
@@ -909,17 +910,19 @@ ul, ol {
     padding: 0 16px 8px;
     margin-right: 0;
     scrollbar-gutter: auto;
-    scrollbar-color: #d9d0e0 transparent;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
     -webkit-overflow-scrolling: touch;
   }
 
   .product-thumbs::-webkit-scrollbar {
-    height: 6px;
-    width: auto;
+    height: 0;
+    width: 0;
+    display: none;
   }
 
   .product-thumbs::-webkit-scrollbar-thumb {
-    background: #d9d0e0;
+    display: none;
   }
 
   .product-thumb {
