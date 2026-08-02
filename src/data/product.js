@@ -18,6 +18,7 @@ const shade130Images = imgs(
   [
     '/images/revealer/shade-130.jpg',
     '/images/revealer/shade-130-extra-revealer-skin-improving-foundation-spf-25-RevealerFoundation_pdp_Shade130-smudge.jpg',
+    '/images/revealer/pdp_revealer-skin-improving-foundation-spf-25-RevealerFoundation_pdp_Kosas_FaceChart_01_Light_100-130.jpg',
     '/images/revealer/pdp_02_Dreamskin_pdp_Holiday_Kosas_2022_04_Light_284457a9-2b2c-41d9-bdcf-bf5a856b979e.jpg',
     '/images/revealer/pdp_RevealerFoundation_pdp_Kosas_revealedcopy.jpg',
     '/images/revealer/pdp_RevealerFoundation_pdp_Kosas_clinicalscopy.jpg',
@@ -31,6 +32,7 @@ const shade170Images = imgs(
   [
     '/images/revealer/shade-170.jpg',
     '/images/revealer/shade-170-extra-revealer-skin-improving-foundation-spf-25-RevealerFoundation_pdp_Shade170-smudge.jpg',
+    '/images/revealer/pdp_revealer-skin-improving-foundation-spf-25-RevealerFoundation_pdp_Kosas_FaceChart_01_Light_170-190.jpg',
     '/images/revealer/pdp_02_Dreamskin_pdp_Holiday_Kosas_2022_04_Light_284457a9-2b2c-41d9-bdcf-bf5a856b979e.jpg',
     '/images/revealer/pdp_RevealerFoundation_pdp_Kosas_revealedcopy.jpg',
     '/images/revealer/pdp_RevealerFoundation_pdp_Kosas_clinicalscopy.jpg',
@@ -44,6 +46,7 @@ const shade190Images = imgs(
   [
     '/images/revealer/shade-190.jpg',
     '/images/revealer/shade-190-extra-revealer-skin-improving-foundation-spf-25-RevealerFoundation_pdp_Shade190-smudge.jpg',
+    '/images/revealer/pdp_revealer-skin-improving-foundation-spf-25-RevealerFoundation_pdp_Kosas_FaceChart_01_Light_170-190.jpg',
     '/images/revealer/pdp_02_Dreamskin_pdp_Holiday_Kosas_2022_04_Medium_ae91fade-ce6f-48e3-a39a-d701cd110455.jpg',
     '/images/revealer/pdp_RevealerFoundation_pdp_Kosas_revealedcopy.jpg',
     '/images/revealer/pdp_RevealerFoundation_pdp_Kosas_clinicalscopy.jpg',
@@ -57,6 +60,7 @@ const shade230Images = imgs(
   [
     '/images/revealer/shade-230.jpg',
     '/images/revealer/shade-230-extra-revealer-skin-improving-foundation-spf-25-RevealerFoundation_pdp_Shade230-smudge.jpg',
+    '/images/revealer/pdp_revealer-skin-improving-foundation-spf-25-RevealerFoundation_pdp_Kosas_FaceChart_02_Med_220-240.jpg',
     '/images/revealer/pdp_02_Dreamskin_pdp_Holiday_Kosas_2022_04_Medium_ae91fade-ce6f-48e3-a39a-d701cd110455.jpg',
     '/images/revealer/pdp_RevealerFoundation_pdp_Kosas_revealedcopy.jpg',
     '/images/revealer/pdp_RevealerFoundation_pdp_Kosas_clinicalscopy.jpg',
@@ -70,6 +74,7 @@ const shade240Images = imgs(
   [
     '/images/revealer/shade-240.jpg',
     '/images/revealer/shade-240-extra-revealer-skin-improving-foundation-spf-25-RevealerFoundation_pdp_Shade240-smudge.jpg',
+    '/images/revealer/pdp_revealer-skin-improving-foundation-spf-25-RevealerFoundation_pdp_Kosas_FaceChart_02_Med_220-240.jpg',
     '/images/revealer/pdp_02_Dreamskin_pdp_Holiday_Kosas_2022_04_Medium_ae91fade-ce6f-48e3-a39a-d701cd110455.jpg',
     '/images/revealer/pdp_RevealerFoundation_pdp_Kosas_revealedcopy.jpg',
     '/images/revealer/pdp_RevealerFoundation_pdp_Kosas_clinicalscopy.jpg',
@@ -83,6 +88,7 @@ const shade250Images = imgs(
   [
     '/images/revealer/shade-250.jpg',
     '/images/revealer/shade-250-extra-revealer-skin-improving-foundation-spf-25-RevealerFoundation_pdp_Shade250-smudge.jpg',
+    '/images/revealer/pdp_revealer-skin-improving-foundation-spf-25-RevealerFoundation_pdp_Kosas_FaceChart_02_Med_220-240.jpg',
     '/images/revealer/pdp_02_Dreamskin_pdp_Holiday_Kosas_2022_04_Medium_ae91fade-ce6f-48e3-a39a-d701cd110455.jpg',
     '/images/revealer/pdp_RevealerFoundation_pdp_Kosas_revealedcopy.jpg',
     '/images/revealer/pdp_RevealerFoundation_pdp_Kosas_clinicalscopy.jpg',
