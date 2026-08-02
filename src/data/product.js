@@ -1,6 +1,6 @@
 export const brand = {
   name: 'Kosas',
-  logoSrc: '/kosas-logo.svg',
+  logoSrc: '/kosas-logo.png',
   logoSrcLight: '/kosas-logo-white.svg',
   freeShippingThreshold: 50,
   tagline: 'Makeup for skincare freaks',
