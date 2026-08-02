@@ -1137,11 +1137,11 @@ export default function App() {
       </div>
 
       <section className="product-section">
-        <div className="product-gallery">
+        <div className="product-gallery" key={colorId}>
           <div className="product-thumbs">
             {productImages.map((img, i) => (
               <button
-                key={img.src}
+                key={`${colorId}-${i}-${img.src}`}
                 type="button"
                 className={`product-thumb${activeImage === i ? ' is-active' : ''}`}
                 onClick={() => switchImage(i)}
@@ -1155,6 +1155,7 @@ export default function App() {
               <span className="badge">{product.badge}</span>
             )}
             <img
+              key={`${colorId}-${activeImage}`}
               className={`product-main-image__img${imageSwitching ? ' is-switching' : ''}`}
               src={productImages[activeImage].src}
               alt={productImages[activeImage].alt}
