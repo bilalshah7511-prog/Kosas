@@ -14,38 +14,6 @@ function imgs(list, label) {
   }));
 }
 
-const shade240Images = imgs(
-  [
-    '/images/revealer/shade-240.jpg',
-    '/images/revealer/shade-240-extra-revealer-skin-improving-foundation-spf-25-240.jpg',
-    '/images/revealer/shade-240-extra-revealer-skin-improving-foundation-spf-25-RevealerFoundation_pdp_Shade240-smudge.jpg',
-  ],
-  "Medium Warm 240",
-);
-const shade100Images = imgs(
-  [
-    '/images/revealer/shade-100.jpg',
-    '/images/revealer/shade-100-extra-revealer-skin-improving-foundation-spf-25-100.jpg',
-    '/images/revealer/shade-100-extra-revealer-skin-improving-foundation-spf-25-RevealerFoundation_pdp_Shade100-smudge.jpg',
-  ],
-  "Very Light Neutral 100",
-);
-const shade110Images = imgs(
-  [
-    '/images/revealer/shade-110.jpg',
-    '/images/revealer/shade-110-extra-revealer-skin-improving-foundation-spf-25-110.jpg',
-    '/images/revealer/shade-110-extra-revealer-skin-improving-foundation-spf-25-RevealerFoundation_pdp_Shade110-smudge.jpg',
-  ],
-  "Very Light Neutral 110",
-);
-const shade120Images = imgs(
-  [
-    '/images/revealer/shade-120.jpg',
-    '/images/revealer/shade-120-extra-revealer-skin-improving-foundation-spf-25-120.jpg',
-    '/images/revealer/shade-120-extra-revealer-skin-improving-foundation-spf-25-RevealerFoundation_pdp_Shade120-smudge.jpg',
-  ],
-  "Very Light Cool 120",
-);
 const shade130Images = imgs(
   [
     '/images/revealer/shade-130.jpg',
@@ -53,30 +21,6 @@ const shade130Images = imgs(
     '/images/revealer/shade-130-extra-revealer-skin-improving-foundation-spf-25-RevealerFoundation_pdp_Shade130-smudge.jpg',
   ],
   "Light Neutral Warm 130",
-);
-const shade140Images = imgs(
-  [
-    '/images/revealer/shade-140.jpg',
-    '/images/revealer/shade-140-extra-revealer-skin-improving-foundation-spf-25-140.jpg',
-    '/images/revealer/shade-140-extra-revealer-skin-improving-foundation-spf-25-RevealerFoundation_pdp_Shade140-smudge.jpg',
-  ],
-  "Light Neutral 140",
-);
-const shade150Images = imgs(
-  [
-    '/images/revealer/shade-150.jpg',
-    '/images/revealer/shade-150-extra-revealer-skin-improving-foundation-spf-25-150.jpg',
-    '/images/revealer/shade-150-extra-revealer-skin-improving-foundation-spf-25-RevealerFoundation_pdp_Shade150-smudge.jpg',
-  ],
-  "Light Cool 150",
-);
-const shade160Images = imgs(
-  [
-    '/images/revealer/shade-160.jpg',
-    '/images/revealer/shade-160-extra-revealer-skin-improving-foundation-spf-25-160.jpg',
-    '/images/revealer/shade-160-extra-revealer-skin-improving-foundation-spf-25-RevealerFoundation_pdp_Shade160-smudge.jpg',
-  ],
-  "Light+ Neutral Olive 160",
 );
 const shade170Images = imgs(
   [
@@ -86,14 +30,6 @@ const shade170Images = imgs(
   ],
   "Light+ Neutral Warm 170",
 );
-const shade180Images = imgs(
-  [
-    '/images/revealer/shade-180.jpg',
-    '/images/revealer/shade-180-extra-revealer-skin-improving-foundation-spf-25-180.jpg',
-    '/images/revealer/shade-180-extra-revealer-skin-improving-foundation-spf-25-RevealerFoundation_pdp_Shade180-smudge.jpg',
-  ],
-  "Light+ Cool 180",
-);
 const shade190Images = imgs(
   [
     '/images/revealer/shade-190.jpg',
@@ -101,30 +37,6 @@ const shade190Images = imgs(
     '/images/revealer/shade-190-extra-revealer-skin-improving-foundation-spf-25-RevealerFoundation_pdp_Shade190-smudge.jpg',
   ],
   "Light Medium Neutral Warm 190",
-);
-const shade200Images = imgs(
-  [
-    '/images/revealer/shade-200.jpg',
-    '/images/revealer/shade-200-extra-revealer-skin-improving-foundation-spf-25-200.jpg',
-    '/images/revealer/shade-200-extra-revealer-skin-improving-foundation-spf-25-RevealerFoundation_pdp_Shade200-smudge.jpg',
-  ],
-  "Light Medium Neutral 200",
-);
-const shade210Images = imgs(
-  [
-    '/images/revealer/shade-210.jpg',
-    '/images/revealer/shade-210-extra-revealer-skin-improving-foundation-spf-25-210.jpg',
-    '/images/revealer/shade-210-extra-revealer-skin-improving-foundation-spf-25-RevealerFoundation_pdp_Shade210-smudge.jpg',
-  ],
-  "Light Medium Neutral Olive 210",
-);
-const shade220Images = imgs(
-  [
-    '/images/revealer/shade-220.jpg',
-    '/images/revealer/shade-220-extra-revealer-skin-improving-foundation-spf-25-220.jpg',
-    '/images/revealer/shade-220-extra-revealer-skin-improving-foundation-spf-25-RevealerFoundation_pdp_Shade220-smudge.jpg',
-  ],
-  "Medium Neutral 220",
 );
 const shade230Images = imgs(
   [
@@ -134,6 +46,14 @@ const shade230Images = imgs(
   ],
   "Medium Neutral Warm 230",
 );
+const shade240Images = imgs(
+  [
+    '/images/revealer/shade-240.jpg',
+    '/images/revealer/shade-240-extra-revealer-skin-improving-foundation-spf-25-240.jpg',
+    '/images/revealer/shade-240-extra-revealer-skin-improving-foundation-spf-25-RevealerFoundation_pdp_Shade240-smudge.jpg',
+  ],
+  "Medium Warm 240",
+);
 const shade250Images = imgs(
   [
     '/images/revealer/shade-250.jpg',
@@ -142,38 +62,6 @@ const shade250Images = imgs(
   ],
   "Medium Tan Warm 250",
 );
-const shade260Images = imgs(
-  [
-    '/images/revealer/shade-260.jpg',
-    '/images/revealer/shade-260-extra-revealer-skin-improving-foundation-spf-25-260.jpg',
-    '/images/revealer/shade-260-extra-revealer-skin-improving-foundation-spf-25-RevealerFoundation_pdp_Shade260-smudge.jpg',
-  ],
-  "Medium Tan Neutral Olive 260",
-);
-const shade270Images = imgs(
-  [
-    '/images/revealer/shade-270.jpg',
-    '/images/revealer/shade-270-extra-revealer-skin-improving-foundation-spf-25-270.jpg',
-    '/images/revealer/shade-270-extra-revealer-skin-improving-foundation-spf-25-RevealerFoundation_pdp_Shade270-smudge.jpg',
-  ],
-  "Medium Tan Olive 270",
-);
-const shade280Images = imgs(
-  [
-    '/images/revealer/shade-280.jpg',
-    '/images/revealer/shade-280-extra-revealer-skin-improving-foundation-spf-25-280.jpg',
-    '/images/revealer/shade-280-extra-revealer-skin-improving-foundation-spf-25-RevealerFoundation_pdp_Shade280-smudge.jpg',
-  ],
-  "Medium Tan Neutral 280",
-);
-const shade290Images = imgs(
-  [
-    '/images/revealer/shade-290.jpg',
-    '/images/revealer/shade-290-extra-revealer-skin-improving-foundation-spf-25-290.jpg',
-    '/images/revealer/shade-290-extra-revealer-skin-improving-foundation-spf-25-RevealerFoundation_pdp_Shade290-smudge.jpg',
-  ],
-  "Medium Deep Neutral Olive 290",
-);
 const shade300Images = imgs(
   [
     '/images/revealer/shade-300.jpg',
@@ -181,22 +69,6 @@ const shade300Images = imgs(
     '/images/revealer/shade-300-extra-revealer-skin-improving-foundation-spf-25-RevealerFoundation_pdp_Shade300-smudge.jpg',
   ],
   "Medium Deep Warm 300",
-);
-const shade310Images = imgs(
-  [
-    '/images/revealer/shade-310.jpg',
-    '/images/revealer/shade-310-extra-revealer-skin-improving-foundation-spf-25-310.jpg',
-    '/images/revealer/shade-310-extra-revealer-skin-improving-foundation-spf-25-RevealerFoundation_pdp_Shade310-smudge.jpg',
-  ],
-  "Medium Deep Neutral Cool 310",
-);
-const shade320Images = imgs(
-  [
-    '/images/revealer/shade-320.jpg',
-    '/images/revealer/shade-320-extra-revealer-skin-improving-foundation-spf-25-320.jpg',
-    '/images/revealer/shade-320-extra-revealer-skin-improving-foundation-spf-25-RevealerFoundation_pdp_Shade320-smudge.jpg',
-  ],
-  "Medium Deep Neutral 320",
 );
 const shade330Images = imgs(
   [
@@ -222,14 +94,6 @@ const shade350Images = imgs(
   ],
   "Medium Deep Warm 350",
 );
-const shade360Images = imgs(
-  [
-    '/images/revealer/shade-360.jpg',
-    '/images/revealer/shade-360-extra-revealer-skin-improving-foundation-spf-25-360.jpg',
-    '/images/revealer/shade-360-extra-revealer-skin-improving-foundation-spf-25-RevealerFoundation_pdp_Shade360-smudge.jpg',
-  ],
-  "Medium Deep Neutral Olive 360",
-);
 const shade370Images = imgs(
   [
     '/images/revealer/shade-370.jpg',
@@ -237,14 +101,6 @@ const shade370Images = imgs(
     '/images/revealer/shade-370-extra-revealer-skin-improving-foundation-spf-25-RevealerFoundation_pdp_Shade370-smudge.jpg',
   ],
   "Deep Warm 370",
-);
-const shade380Images = imgs(
-  [
-    '/images/revealer/shade-380.jpg',
-    '/images/revealer/shade-380-extra-revealer-skin-improving-foundation-spf-25-380.jpg',
-    '/images/revealer/shade-380-extra-revealer-skin-improving-foundation-spf-25-RevealerFoundation_pdp_Shade380-smudge.jpg',
-  ],
-  "Deep Neutral 380",
 );
 const shade390Images = imgs(
   [
@@ -254,14 +110,6 @@ const shade390Images = imgs(
   ],
   "Deep Neutral Warm 390",
 );
-const shade400Images = imgs(
-  [
-    '/images/revealer/shade-400.jpg',
-    '/images/revealer/shade-400-extra-revealer-skin-improving-foundation-spf-25-400.jpg',
-    '/images/revealer/shade-400-extra-revealer-skin-improving-foundation-spf-25-RevealerFoundation_pdp_Shade400-smudge.jpg',
-  ],
-  "Deep Neutral Olive 400",
-);
 const shade410Images = imgs(
   [
     '/images/revealer/shade-410.jpg',
@@ -269,37 +117,6 @@ const shade410Images = imgs(
     '/images/revealer/shade-410-extra-revealer-skin-improving-foundation-spf-25-RevealerFoundation_pdp_Shade410-smudge.jpg',
   ],
   "Deep Neutral Warm 410",
-);
-const shade420Images = imgs(
-  [
-    '/images/revealer/shade-420.jpg',
-    '/images/revealer/shade-420-extra-revealer-skin-improving-foundation-spf-25-420.jpg',
-    '/images/revealer/shade-420-extra-revealer-skin-improving-foundation-spf-25-RevealerFoundation_pdp_Shade420-smudge.jpg',
-  ],
-  "Rich Deep Cool 420",
-);
-const shade430Images = imgs(
-  [
-    '/images/revealer/shade-430.jpg',
-    '/images/revealer/shade-430-extra-revealer-skin-improving-foundation-spf-25-430.jpg',
-    '/images/revealer/shade-430-extra-revealer-skin-improving-foundation-spf-25-RevealerFoundation_pdp_Shade430-smudge.jpg',
-  ],
-  "Rich Deep Neutral Olive 430",
-);
-const shade440Images = imgs(
-  [
-    '/images/revealer/shade-440.jpg',
-    '/images/revealer/shade-440-extra-revealer-skin-improving-foundation-spf-25-440.jpg',
-  ],
-  "Rich Deep Neutral 440",
-);
-const shade450Images = imgs(
-  [
-    '/images/revealer/shade-450.jpg',
-    '/images/revealer/shade-450-extra-revealer-skin-improving-foundation-spf-25-450.jpg',
-    '/images/revealer/shade-450-extra-revealer-skin-improving-foundation-spf-25-RevealerFoundation_pdp_Shade450-smudge.jpg',
-  ],
-  "Rich Deep Neutral 450",
 );
 
 export const product = {
@@ -320,46 +137,10 @@ export const product = {
       images: shade240Images,
     },
     {
-      id: 'shade100',
-      label: "Very Light Neutral 100",
-      hex: '#F4E4D4',
-      images: shade100Images,
-    },
-    {
-      id: 'shade110',
-      label: "Very Light Neutral 110",
-      hex: '#F0DCC8',
-      images: shade110Images,
-    },
-    {
-      id: 'shade120',
-      label: "Very Light Cool 120",
-      hex: '#EBD4C0',
-      images: shade120Images,
-    },
-    {
       id: 'shade130',
       label: "Light Neutral Warm 130",
       hex: '#E8CDB0',
       images: shade130Images,
-    },
-    {
-      id: 'shade140',
-      label: "Light Neutral 140",
-      hex: '#E2C09A',
-      images: shade140Images,
-    },
-    {
-      id: 'shade150',
-      label: "Light Cool 150",
-      hex: '#DDB892',
-      images: shade150Images,
-    },
-    {
-      id: 'shade160',
-      label: "Light+ Neutral Olive 160",
-      hex: '#D4B08A',
-      images: shade160Images,
     },
     {
       id: 'shade170',
@@ -368,34 +149,10 @@ export const product = {
       images: shade170Images,
     },
     {
-      id: 'shade180',
-      label: "Light+ Cool 180",
-      hex: '#C89C76',
-      images: shade180Images,
-    },
-    {
       id: 'shade190',
       label: "Light Medium Neutral Warm 190",
       hex: '#C0946C',
       images: shade190Images,
-    },
-    {
-      id: 'shade200',
-      label: "Light Medium Neutral 200",
-      hex: '#B88A62',
-      images: shade200Images,
-    },
-    {
-      id: 'shade210',
-      label: "Light Medium Neutral Olive 210",
-      hex: '#B0825C',
-      images: shade210Images,
-    },
-    {
-      id: 'shade220',
-      label: "Medium Neutral 220",
-      hex: '#A87854',
-      images: shade220Images,
     },
     {
       id: 'shade230',
@@ -410,46 +167,10 @@ export const product = {
       images: shade250Images,
     },
     {
-      id: 'shade260',
-      label: "Medium Tan Neutral Olive 260",
-      hex: '#875C40',
-      images: shade260Images,
-    },
-    {
-      id: 'shade270',
-      label: "Medium Tan Olive 270",
-      hex: '#7E543A',
-      images: shade270Images,
-    },
-    {
-      id: 'shade280',
-      label: "Medium Tan Neutral 280",
-      hex: '#764E36',
-      images: shade280Images,
-    },
-    {
-      id: 'shade290',
-      label: "Medium Deep Neutral Olive 290",
-      hex: '#6E4A34',
-      images: shade290Images,
-    },
-    {
       id: 'shade300',
       label: "Medium Deep Warm 300",
       hex: '#664430',
       images: shade300Images,
-    },
-    {
-      id: 'shade310',
-      label: "Medium Deep Neutral Cool 310",
-      hex: '#5E3E2C',
-      images: shade310Images,
-    },
-    {
-      id: 'shade320',
-      label: "Medium Deep Neutral 320",
-      hex: '#563A2A',
-      images: shade320Images,
     },
     {
       id: 'shade330',
@@ -470,22 +191,10 @@ export const product = {
       images: shade350Images,
     },
     {
-      id: 'shade360',
-      label: "Medium Deep Neutral Olive 360",
-      hex: '#3C2A20',
-      images: shade360Images,
-    },
-    {
       id: 'shade370',
       label: "Deep Warm 370",
       hex: '#36261C',
       images: shade370Images,
-    },
-    {
-      id: 'shade380',
-      label: "Deep Neutral 380",
-      hex: '#30221A',
-      images: shade380Images,
     },
     {
       id: 'shade390',
@@ -494,40 +203,10 @@ export const product = {
       images: shade390Images,
     },
     {
-      id: 'shade400',
-      label: "Deep Neutral Olive 400",
-      hex: '#261A16',
-      images: shade400Images,
-    },
-    {
       id: 'shade410',
       label: "Deep Neutral Warm 410",
       hex: '#221814',
       images: shade410Images,
-    },
-    {
-      id: 'shade420',
-      label: "Rich Deep Cool 420",
-      hex: '#1E1612',
-      images: shade420Images,
-    },
-    {
-      id: 'shade430',
-      label: "Rich Deep Neutral Olive 430",
-      hex: '#1A1210',
-      images: shade430Images,
-    },
-    {
-      id: 'shade440',
-      label: "Rich Deep Neutral 440",
-      hex: '#16100E',
-      images: shade440Images,
-    },
-    {
-      id: 'shade450',
-      label: "Rich Deep Neutral 450",
-      hex: '#120C0A',
-      images: shade450Images,
     },
   ],
   sizes: [
