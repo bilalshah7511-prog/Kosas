@@ -520,7 +520,11 @@ export default function App() {
                   >
                     <span
                       className="cart-control__swatch"
-                      style={{ background: selectedColor.hex }}
+                      style={
+                        selectedColor.swatch
+                          ? { backgroundImage: `url(${selectedColor.swatch})` }
+                          : { background: selectedColor.hex }
+                      }
                       aria-hidden="true"
                     />
                     {selectedColor.label}
@@ -762,24 +766,22 @@ export default function App() {
               )}
 
               <div className="pdp-sheet__section">
-                <p className="color-label">Color: {draftColor.label}</p>
+                <p className="color-label">Shade: {draftColor.label}</p>
                 <div className="color-swatch-row">
                   {product.colors.map((c) => (
                     <button
                       key={c.id}
                       type="button"
-                      className={`color-swatch${draftColorId === c.id ? ' is-active' : ''}`}
-                      style={{ background: c.hex }}
+                      className={`color-swatch${draftColorId === c.id ? ' is-active' : ''}${c.available === false ? ' is-unavailable' : ''}`}
+                      style={
+                        c.swatch
+                          ? { backgroundImage: `url(${c.swatch})` }
+                          : { background: c.hex }
+                      }
                       aria-label={c.label}
                       title={c.label}
                       onClick={() => selectDraftColor(c.id)}
-                    >
-                      {draftColorId === c.id && (
-                        <svg className="color-swatch__check" viewBox="0 0 16 16" width="12" height="12" aria-hidden="true">
-                          <path d="M3 8.5l3.2 3.2L13 4.5" fill="none" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                        </svg>
-                      )}
-                    </button>
+                    />
                   ))}
                 </div>
               </div>
@@ -1187,24 +1189,22 @@ export default function App() {
           </div>
 
           <div className="purchase-options">
-            <p className="color-label">Color: {selectedColor.label}</p>
+            <p className="color-label">Shade: {selectedColor.label}</p>
             <div className="color-swatch-row">
               {product.colors.map((c) => (
                 <button
                   key={c.id}
                   type="button"
-                  className={`color-swatch${colorId === c.id ? ' is-active' : ''}`}
-                  style={{ background: c.hex }}
+                  className={`color-swatch${colorId === c.id ? ' is-active' : ''}${c.available === false ? ' is-unavailable' : ''}`}
+                  style={
+                    c.swatch
+                      ? { backgroundImage: `url(${c.swatch})` }
+                      : { background: c.hex }
+                  }
                   aria-label={c.label}
                   title={c.label}
                   onClick={() => selectColor(c.id)}
-                >
-                  {colorId === c.id && (
-                    <svg className="color-swatch__check" viewBox="0 0 16 16" width="12" height="12" aria-hidden="true">
-                      <path d="M3 8.5l3.2 3.2L13 4.5" fill="none" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                    </svg>
-                  )}
-                </button>
+                />
               ))}
             </div>
           </div>
