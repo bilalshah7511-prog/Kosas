@@ -35,6 +35,8 @@ export default function App() {
   const [activeTab, setActiveTab] = useState('description');
   const [openAccordion, setOpenAccordion] = useState('how-to-use');
   const [sizeId, setSizeId] = useState(product.sizes[0].id);
+  const [sizeMenuOpen, setSizeMenuOpen] = useState(false);
+  const sizeSelectRef = useRef(null);
   const [colorId, setColorId] = useState(product.colors[0].id);
 
   const [cartOpen, setCartOpen] = useState(false);
@@ -103,16 +105,33 @@ export default function App() {
   const estimatedTotal = Math.max(0, subtotalAfterPromo + shippingCost + estimatedTax);
   const freeShipping = shippingWaived;
   const checkoutReady = completion.shipping && completion.delivery && completion.payment;
-  const shippingProgress = Math.min(
-    100,
-    Math.round((Math.min(lineTotal, brand.freeShippingThreshold) / brand.freeShippingThreshold) * 100),
-  );
+  const stepsDone =
+    (completion.shipping ? 1 : 0) + (completion.delivery ? 1 : 0) + (completion.payment ? 1 : 0);
+  const checkoutProgress = stepsDone === 0 ? 0 : stepsDone === 1 ? 33 : stepsDone === 2 ? 67 : 100;
   const cardBrand = detectCardBrand(cardNumber);
 
   const draftSize = product.sizes.find((s) => s.id === draftSizeId) || product.sizes[0];
   const draftColor = product.colors.find((c) => c.id === draftColorId) || product.colors[0];
   const draftImages = draftColor.images?.length ? draftColor.images : product.images;
   const draftUnitPrice = draftSize.price;
+
+  useEffect(() => {
+    if (!sizeMenuOpen) return undefined;
+    function onPointerDown(e) {
+      if (sizeSelectRef.current && !sizeSelectRef.current.contains(e.target)) {
+        setSizeMenuOpen(false);
+      }
+    }
+    function onKey(e) {
+      if (e.key === 'Escape') setSizeMenuOpen(false);
+    }
+    document.addEventListener('pointerdown', onPointerDown);
+    document.addEventListener('keydown', onKey);
+    return () => {
+      document.removeEventListener('pointerdown', onPointerDown);
+      document.removeEventListener('keydown', onKey);
+    };
+  }, [sizeMenuOpen]);
 
   function selectColor(nextId) {
     if (nextId === colorId) return;
@@ -136,11 +155,11 @@ export default function App() {
   }
 
   useEffect(() => {
-    document.body.style.overflow = cartOpen || menuOpen ? 'hidden' : '';
+    document.body.style.overflow = cartOpen || menuOpen || checkoutLoading ? 'hidden' : '';
     return () => {
       document.body.style.overflow = '';
     };
-  }, [cartOpen, menuOpen]);
+  }, [cartOpen, menuOpen, checkoutLoading]);
 
   useEffect(() => {
     if (!selectedDate && dates[0]) setSelectedDate(dates[0]);
@@ -213,15 +232,11 @@ export default function App() {
 
   function verifyContinue() {
     setIsVerified(true);
-    setSheetFeedback('check');
-    setTimeout(() => {
-      setSheetFeedback(null);
-      setSheet(null);
-      if (pendingCheckout) {
-        setPendingCheckout(false);
-        setTimeout(() => setCheckoutLoading(true), 280);
-      }
-    }, 1400);
+    setSheet(null);
+    if (pendingCheckout) {
+      setPendingCheckout(false);
+      setTimeout(() => setCheckoutLoading(true), 280);
+    }
   }
 
   function applyPromo() {
@@ -312,8 +327,31 @@ export default function App() {
   }
 
   function finishCheckoutLoader() {
-    setCheckoutLoading(false);
-    setSuccessOpen(true);
+    setSheet(null);
+    requestAnimationFrame(() => {
+      setCartOpen(false);
+    });
+
+    window.setTimeout(() => {
+      setCheckoutLoading(false);
+      setInCart(false);
+      setQty(1);
+      setCompletion({ shipping: false, delivery: false, payment: false });
+      setShippingStatus('Click to select shipping option');
+      setDeliveryStatus('Click to add delivery details');
+      setPaymentStatus('Click to add payment method');
+      setSavedCardBrand(null);
+      setShippingValue('');
+      setPickupChosen(null);
+      setShowPickupTimes(false);
+      setCardNumber('');
+      setCardName('');
+      setCardExpiry('');
+      setCardCvv('');
+      setIsVerified(false);
+      setPendingCheckout(false);
+      setSuccessOpen(false);
+    }, 620);
   }
 
   const tabContent = {
@@ -424,30 +462,35 @@ export default function App() {
         </div>
       </div>
 
-      <div className={`cart-overlay${cartOpen ? ' is-open' : ''}`} onClick={closeCart} />
-      <div className={`cart-drawer${cartOpen ? ' is-open' : ''}`}>
+      <div
+        className={`cart-overlay${cartOpen || checkoutLoading ? ' is-open' : ''}`}
+        onClick={checkoutLoading ? undefined : closeCart}
+      />
+      <div
+        className={`cart-drawer${cartOpen ? ' is-open' : ''}${checkoutLoading ? ' is-checkout' : ''}${!cartOpen && checkoutLoading ? ' is-closing' : ''}`}
+      >
         <CheckoutLoader
           open={checkoutLoading}
-          logoSrc={brand.logoSrcLight || brand.logoSrc}
           brandLabel={brand.name}
+          logoSrc={brand.logoSrc}
           onDone={finishCheckoutLoader}
         />
 
+        <div className="cart-drawer__progress cart-drawer__progress--top">
+          <div
+            className="cart-drawer__progress-bar"
+            style={{ width: `${inCart ? checkoutProgress : 0}%` }}
+          />
+        </div>
+
         <div className="cart-drawer__header">
-          <span className="cart-drawer__count" aria-label={`${cartCount} items`}>
-            {cartCount}
-          </span>
-          <h2 className="cart-drawer__title">your bag</h2>
+          <span className="cart-drawer__header-spacer" aria-hidden="true" />
+          <div className="cart-drawer__logo">
+            <img src={brand.logoSrc} alt={brand.name} />
+          </div>
           <button type="button" className="cart-drawer__close" onClick={closeCart} aria-label="Close">
             &times;
           </button>
-        </div>
-
-        <div className="cart-drawer__progress">
-          <div
-            className="cart-drawer__progress-bar"
-            style={{ width: `${inCart ? shippingProgress : 0}%` }}
-          />
         </div>
 
         <p className="cart-drawer__shipping-msg">
@@ -615,7 +658,6 @@ export default function App() {
 
           {/* Estimated Total breakdown */}
           <div className={`checkout-sheet checkout-sheet--total${sheet === 'total' ? ' is-active' : ''}`}>
-            <div className="checkout-sheet__handle" />
             <h3 className="total-sheet__title">Estimated Total</h3>
 
             <div className="total-sheet__rows">
@@ -838,7 +880,6 @@ export default function App() {
 
           {/* Verify */}
           <div className={`checkout-sheet${sheet === 'verify' ? ' is-active' : ''}`}>
-            <div className="checkout-sheet__handle" />
             <div className="checkout-sheet__brand-wrap">
               <img src={brand.logoSrc} alt={brand.name} className="checkout-sheet__brand-logo" />
             </div>
@@ -855,7 +896,7 @@ export default function App() {
                 className={`verify-tab${verifyMode === 'member' ? ' is-active' : ''}`}
                 onClick={() => setVerifyMode('member')}
               >
-                Member <span className="sparkle">&#10024;</span>
+                Member
               </button>
             </div>
             <label className="checkout-label">Email Address</label>
@@ -1171,19 +1212,41 @@ export default function App() {
           </div>
           <p className="product-subtitle">{product.subtitle}</p>
 
-          <div className="size-select">
-            <label htmlFor="sizeSelect" className="size-select__label">select your size</label>
-            <div className="size-select__wrap">
-              <select
-                id="sizeSelect"
+          <div className="size-select" ref={sizeSelectRef}>
+            <label id="sizeSelectLabel" className="size-select__label">
+              select your size
+            </label>
+            <div className={`size-select__wrap${sizeMenuOpen ? ' is-open' : ''}`}>
+              <button
+                type="button"
                 className="size-select__input"
-                value={sizeId}
-                onChange={(e) => setSizeId(e.target.value)}
+                aria-haspopup="listbox"
+                aria-expanded={sizeMenuOpen}
+                aria-labelledby="sizeSelectLabel"
+                onClick={() => setSizeMenuOpen((o) => !o)}
               >
-                {product.sizes.map((s) => (
-                  <option key={s.id} value={s.id}>{s.label}</option>
-                ))}
-              </select>
+                {selectedSize.label}
+              </button>
+              {sizeMenuOpen && (
+                <ul className="size-select__menu" role="listbox" aria-labelledby="sizeSelectLabel">
+                  {product.sizes.map((s) => (
+                    <li key={s.id} role="presentation">
+                      <button
+                        type="button"
+                        role="option"
+                        aria-selected={sizeId === s.id}
+                        className={`size-select__option${sizeId === s.id ? ' is-selected' : ''}`}
+                        onClick={() => {
+                          setSizeId(s.id);
+                          setSizeMenuOpen(false);
+                        }}
+                      >
+                        {s.label}
+                      </button>
+                    </li>
+                  ))}
+                </ul>
+              )}
             </div>
           </div>
 

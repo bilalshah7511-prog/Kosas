@@ -1,14 +1,14 @@
 import { useEffect, useMemo, useRef } from 'react';
-import * as LottieModule from 'lottie-react';
+import LottieImport from 'lottie-react';
 import checkAnimation from '../assets/lottie/check.json';
 import crossAnimation from '../assets/lottie/cross.json';
 
 const Lottie =
-  typeof LottieModule.default === 'function'
-    ? LottieModule.default
-    : typeof LottieModule === 'function'
-      ? LottieModule
-      : null;
+  typeof LottieImport === 'function'
+    ? LottieImport
+    : typeof LottieImport?.default === 'function'
+      ? LottieImport.default
+      : LottieImport?.default?.default || LottieImport?.LottiePlayer;
 
 const animations = {
   check: checkAnimation,
