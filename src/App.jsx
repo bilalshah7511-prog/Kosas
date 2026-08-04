@@ -558,7 +558,7 @@ export default function App() {
 
                   <button
                     type="button"
-                    className="cart-control cart-control--chip"
+                    className="cart-control cart-control--chip cart-control--shade"
                     onClick={openPdpSheet}
                   >
                     <span
@@ -566,13 +566,13 @@ export default function App() {
                       style={{ background: selectedColor.hex }}
                       aria-hidden="true"
                     />
-                    {selectedColor.label}
+                    <span className="cart-control__label">{selectedColor.label}</span>
                     <span className="cart-control__chevron" aria-hidden="true">▾</span>
                   </button>
 
                   <button
                     type="button"
-                    className="cart-control cart-control--chip"
+                    className="cart-control cart-control--chip cart-control--size"
                     onClick={openPdpSheet}
                   >
                     {selectedSize.label}
@@ -1274,7 +1274,7 @@ export default function App() {
           </div>
 
           <button type="button" className="add-to-cart-btn" onClick={addToCart}>
-            ${unitPrice.toFixed(2)} — Add to Bag
+            {`ADD TO BAG - $${unitPrice.toFixed(2)}`}
           </button>
 
           <div className="product-tabs">

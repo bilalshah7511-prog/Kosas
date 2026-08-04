@@ -91,18 +91,20 @@ body {
 }
 
 .checkout-sheet__brand-logo {
-  height: 22px;
-  width: auto;
-  max-width: 140px;
+  height: 29px !important;
+  width: auto !important;
+  max-width: 182px !important;
   object-fit: contain;
   display: block;
 }
 
 .logo,
 .site-logo img {
-  height: 24px;
-  width: auto;
+  height: 31px !important;
+  width: auto !important;
+  max-width: 200px !important;
   display: block;
+  object-fit: contain;
 }
 
 .announcement-bar {
@@ -243,9 +245,9 @@ body {
 }
 
 .cart-drawer__logo img {
-  height: 22px !important;
+  height: 29px !important;
   width: auto;
-  max-width: 120px;
+  max-width: 156px;
   object-fit: contain;
 }
 
@@ -282,6 +284,101 @@ body {
 .cart-control--chip {
   border-radius: 999px !important;
   border: 1px solid #000 !important;
+  box-sizing: border-box !important;
+}
+
+.cart-item--pdp .cart-item__info {
+  min-width: 0 !important;
+  overflow: hidden;
+}
+
+.cart-item__controls {
+  display: flex !important;
+  flex-wrap: nowrap !important;
+  align-items: center !important;
+  gap: 5px !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  box-sizing: border-box !important;
+  margin-top: 8px;
+  overflow: hidden;
+}
+
+.cart-item--pdp .cart-item__img {
+  width: 100px !important;
+  height: 100px !important;
+  flex-basis: 100px !important;
+}
+
+.cart-item--pdp .cart-item__media {
+  flex: 0 0 100px !important;
+  width: 100px !important;
+}
+
+.cart-item__controls .cart-control,
+.cart-item__controls .cart-control--chip {
+  display: inline-flex !important;
+  flex-wrap: nowrap !important;
+  align-items: center !important;
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  line-height: 1.1 !important;
+  box-sizing: border-box !important;
+}
+
+/* Qty — content width */
+.cart-item__controls > .cart-control:not(.cart-control--chip) {
+  flex: 0 0 auto !important;
+  width: auto !important;
+  min-width: 0 !important;
+  justify-content: center !important;
+  gap: 6px !important;
+  padding: 0 8px !important;
+  font-size: 12px !important;
+}
+
+/* Shade — grows in remaining space, stays inside price edge */
+.cart-item__controls .cart-control--shade {
+  flex: 1 1 0 !important;
+  width: auto !important;
+  min-width: 0 !important;
+  max-width: 100% !important;
+  justify-content: flex-start !important;
+  gap: 5px !important;
+  padding: 0 10px !important;
+  font-size: 12px !important;
+  overflow: hidden !important;
+}
+
+/* Size — compact pill, does not push past price */
+.cart-item__controls .cart-control--size {
+  flex: 0 0 auto !important;
+  width: auto !important;
+  min-width: 56px !important;
+  max-width: none !important;
+  justify-content: center !important;
+  gap: 3px !important;
+  padding: 0 10px !important;
+  font-size: 11px !important;
+}
+
+.cart-item__controls .cart-control__label {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  min-width: 0;
+  flex: 1 1 auto;
+}
+
+.cart-item__controls .cart-control__swatch {
+  width: 11px !important;
+  height: 11px !important;
+  flex-shrink: 0;
+}
+
+.cart-item__controls .cart-control__chevron {
+  flex-shrink: 0;
+  font-size: 9px;
 }
 
 .verify-tabs {
@@ -330,6 +427,10 @@ body {
 
 .checkout-row__total-price,
 .cart-drawer__checkout-panel .checkout-row__total-price,
+.cart-item__price,
+.pdp-sheet__aa-value,
+.option-card__price,
+.total-sheet__value,
 .total-sheet__value.is-free,
 .total-sheet__row--muted .total-sheet__value.is-free {
   color: #111111 !important;
