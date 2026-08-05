@@ -2378,7 +2378,7 @@ ul, ol {
 .verify-tabs {
   display: flex;
   border: 1.5px solid rgba(50, 33, 19, 0.25);
-  border-radius: 8px;
+  border-radius: 0;
   overflow: hidden;
   margin-bottom: 24px;
 }
@@ -2461,7 +2461,7 @@ ul, ol {
   font-weight: 700;
   font-size: 16px;
   padding: 16px;
-  border-radius: 999px;
+  border-radius: 0;
   cursor: pointer;
   margin-top: auto;
   flex-shrink: 0;

@@ -138,12 +138,15 @@ body {
 }
 
 .add-to-cart-btn,
-.checkout-cta {
+.checkout-cta,
+.cart-drawer__checkout,
+.pdp-sheet__cta {
   background: var(--brand-cta-bg) !important;
   color: var(--brand-cta-fg) !important;
   border-radius: 0 !important;
   border: 1.5px solid #000 !important;
   font-weight: 700;
+  letter-spacing: 2px !important;
 }
 
 .add-to-cart-btn:hover,
@@ -418,7 +421,7 @@ body {
 }
 
 .verify-tabs {
-  border-radius: var(--ko-radius) !important;
+  border-radius: 0 !important;
   overflow: hidden;
   margin-bottom: 28px !important;
 }
@@ -430,11 +433,15 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  letter-spacing: 2px !important;
 }
 
-.checkout-input,
-.checkout-cta {
+.checkout-input {
   border-radius: var(--ko-radius) !important;
+}
+
+.checkout-cta {
+  border-radius: 0 !important;
 }
 
 .add-to-cart-btn,
